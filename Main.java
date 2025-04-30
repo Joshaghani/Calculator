@@ -6,6 +6,8 @@ public class Main {
 
         var number1 = getInputNumber("عدد اول را وارد کن");
 
+        String temp = number1 + "";
+
         while (true) {
             var operator = getInputOperator("عملگر را وارد کن");
 
@@ -15,9 +17,11 @@ public class Main {
 
             var number2 = getInputNumber("عدد دوم را وارد کن");
 
+            temp += " " + operator + " " + number2;
+
             var result = calculate(number1, number2, operator);
 
-            print(result + "");
+            print(temp + " = " + result);
 
             number1 = result;
         }
